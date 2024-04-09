@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PoliGYM.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PoliGYM</title>
+
+  <asp:PlaceHolder runat="server">
+    <%: Scripts.Render("~/bundles/modernizr") %>
+  </asp:PlaceHolder>
+
+  <webopt:BundleReference runat="server" Path="~/Content/css" />
+  <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link href="<%= Page.ResolveUrl("~/Content/bootstrap.css") %>" rel="stylesheet" />
+  <link href="Styles/HojaEstilo.css" rel="stylesheet" />
+</head>
+<body>
+  <form runat="server">
+    <header class="header">
+      <div class="logo">
+        <img src="images/logo.jpeg" alt="Logo">
+      </div>
+      <div class="name">
+        <h1>PoliGYM</h1>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#">Menú</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Reseñas</a></li>
+          <li><a href="#">Acerca De</a></li>
+          <li><a href="#">Iniciar Sesión</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container body-content">
+      <asp:ContentPlaceHolder ID="MainContent" runat="server">
+      </asp:ContentPlaceHolder>
+      <hr />
+      <footer class="footer">
+        <div class="left-section">
+          <img src="images/logoInstagram.png" alt="Instagram Logo">
+          <img src="images/logoFacebook.png" alt="Facebook Logo">
+          <img src="images/logoGmail.png" alt="Gmail Logo">
+        </div>
+        <div class="right-section">
+          <p>¡Nunca te rindas! Tu mejor versión está a solo un paso de distancia. ¿Listo para empezar?</p>
+        </div>
+      </footer>
+
+    </div>
+  </form>
+  <asp:PlaceHolder runat="server">
+    <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+  </asp:PlaceHolder>
+</body>
+</html>

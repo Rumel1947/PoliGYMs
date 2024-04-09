@@ -1,0 +1,76 @@
+﻿.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Color de fondo del header */
+    padding: 10px 20px; /* Espaciado interno del header */
+    color: #C3F762; /* Color de texto del header */   
+}
+
+body {
+    background-color: #333; /* Color de fondo negro para toda la página */
+    color: #ffffff; /* Color de texto del header */
+    width: 80%; /* Ancho máximo del cuerpo al 80% de la pantalla */
+    margin: 0 auto; /* Centrar el cuerpo horizontalmente */
+}
+
+.logo img {
+    height: 70px; /* Altura del logo */
+}
+
+.name {
+    text-align: center; /* Centrar el texto */
+}
+
+.menu ul {
+    list-style: none; /* Eliminar viñetas de la lista */
+    padding: 0; /* Eliminar espaciado interno de la lista */
+    margin: 0; /* Eliminar margen de la lista */
+}
+
+.menu ul li {
+    display: inline-block; /* Mostrar elementos de la lista en línea */
+    margin-left: 20px; /* Espaciado entre elementos de la lista */
+}
+
+.menu ul li:first-child {
+    margin-left: 0; /* Eliminar el margen izquierdo del primer elemento */
+}
+
+.menu ul li a {
+    color: #C3F762; /* Color de enlace del menú */
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    transition: color 0.3s, background-color 0.3s, border-radius 0.3s; /* Transición suave para el color del texto, el fondo y las esquinas redondeadas */
+    border-radius: 10px; /* Esquinas redondeadas */
+    display: block; /* Hacer que el enlace ocupe todo el espacio del contenedor */
+    padding: 5px 10px; /* Espaciado interno del enlace */
+}
+
+.menu ul li a:hover {
+    color: #000; /* Color de texto negro al pasar el mouse */
+    background-color: #C3F762; /* Color de fondo al pasar el mouse */
+    border-radius: 15px; /* Esquinas redondeadas más pronunciadas */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Color de fondo del footer */
+    color: #fff; /* Color del texto del footer */
+    padding: 10px 20px; /* Espaciado interno del footer */
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.left-section img {
+    margin-left: -45px; /*Compensar el margen derecho */
+    height: 100px; /* Altura de los logos */
+}
+
+.right-section {
+    text-align: right; /* Alinear texto a la derecha */
+}
