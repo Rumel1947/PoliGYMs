@@ -14,6 +14,10 @@ body {
     margin: 0 auto; /* Centrar el cuerpo horizontalmente */
 }
 
+.h1 {
+    color: #C3F762;
+}
+
 .logo img {
     height: 70px; /* Altura del logo */
 }
@@ -67,10 +71,25 @@ body {
 }
 
 .left-section img {
-    margin-left: -45px; /*Compensar el margen derecho */
-    height: 100px; /* Altura de los logos */
+    margin-left: -45px;
+    height: 100px; 
 }
 
 .right-section {
     text-align: right; /* Alinear texto a la derecha */
+}
+
+.nav-link {
+    color: #C3F762; /* Color de texto del menú */
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    transition: color 0.3s, background-color 0.3s, border-radius 0.3s; /* Transición suave para el color del texto, el fondo y las esquinas redondeadas */
+    border-radius: 10px; /* Esquinas redondeadas */
+    display: block; /* Hacer que el enlace ocupe todo el espacio del contenedor */
+    padding: 5px 10px; /* Espaciado interno del enlace */
+}
+
+.nav-link:hover {
+    color: #000; /* Color de texto negro al pasar el mouse */
+    background-color: #C3F762; /* Color de fondo al pasar el mouse */
+    border-radius: 15px; /* Esquinas redondeadas más pronunciadas */
 }

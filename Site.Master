@@ -28,11 +28,11 @@
       </div>
       <nav class="menu">
         <ul>
-          <li><a href="#">Menú</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Reseñas</a></li>
-          <li><a href="#">Acerca De</a></li>
-          <li><a href="#">Iniciar Sesión</a></li>
+          <li><a class="nav-link" href="<%= Page.ResolveUrl("~/Home.aspx") %>">Home</a></li>
+          <li><a class="nav-link" href="<%= Page.ResolveUrl("~/Servicios.aspx") %>">Servicios</a></li>
+          <li><a class="nav-link" href="<%= Page.ResolveUrl("~/Resenas.aspx") %>">Reseñas </a></li>
+          <li><a class="nav-link" href="<%= Page.ResolveUrl("~/AcercaDe.aspx") %>">Acerca De </a></li>
+          <li><a class="nav-link" href="<%= Page.ResolveUrl("~/IniciarSesion.aspx") %>">Iniciar Sesión </a></li>
         </ul>
       </nav>
     </header>
