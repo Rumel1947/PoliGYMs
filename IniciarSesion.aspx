@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="IniciarSesion.aspx.cs" Inherits="PoliGYM.IniciarSesion" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
   <div class="container">
     <div class="row">
@@ -16,30 +17,35 @@
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#Carrousel" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#Carrousel"
+          data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#Carrousel" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#Carrousel"
+          data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <div class="col-md-6 d-flex justify-content-center align-items-center">
+      <div class="col-md-6 text-center">
         <h1 class="h1 mb-5 mt-4">Inicia Sesión</h1>
-        <div class="row">         
-          <div class="col-md-12 text-center">
-            <asp:TextBox ID="txtEmail" runat="server" placeholder="Correo Eléctronico" Width="250" class="form-control rounded mb-3"></asp:TextBox>
-            <asp:TextBox ID="txtContrasena" runat="server" placeholder="Contraseña" Width="250" class="form-control rounded mb-3"></asp:TextBox>
+        <div class="row mb-3 text-center">
+          <div class="col-md-6 mx-auto">
+            <asp:TextBox ID="txtEmail" runat="server" placeholder="Correo Electrónico" Width="250" class="form-control rounded"></asp:TextBox>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 mt-4 text-center">
+        <div class="row text-center">
+          <div class="col-md-6 mx-auto">
+            <asp:TextBox ID="txtContrasena" runat="server" placeholder="Contraseña" Width="250" class="form-control rounded"></asp:TextBox>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-12 text-center">
             <asp:Button ID="btnEmpezar" runat="server" Text="Empezar" class="link-button"></asp:Button>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 </asp:Content>
