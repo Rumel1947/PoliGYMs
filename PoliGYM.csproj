@@ -104,7 +104,7 @@
     <Content Include="Registrarme.aspx" />
     <Content Include="Resenas.aspx" />
     <Content Include="Servicios.aspx" />
-    <Content Include="Styles\HojaEstilo.css" />
+    <Content Include="Styles\styleSheet.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
