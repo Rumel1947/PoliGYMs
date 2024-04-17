@@ -8,7 +8,7 @@
         <p>Aquí, el fitness se une a la conveniencia para brindarte la mejor experiencia de ejercicio. 
           Únete a nosotros para acceder a clases, entrenamientos y consejos de salud desde la comodidad de tu hogar. 
           ¡Prepárate para ponerte en forma y sentirte genial con nosotros!</p>
-        <a class="nav-link" href="<%= Page.ResolveUrl("~/Registrarme.aspx") %>">Registrarme</a>
+        <a class="link-button" href="<%= Page.ResolveUrl("~/Registrarme.aspx") %>">Registrarme</a>
       </div>
       <div class="col-md-6">
         <div id="Carrousel" class="carousel slide" data-bs-ride="carousel">
