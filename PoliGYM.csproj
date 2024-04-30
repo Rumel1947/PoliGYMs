@@ -99,6 +99,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\clsResenas.cs" />
+    <Content Include="App_Code\nsGeneral.cs" />
+    <Content Include="App_Code\nsSeguridad.cs" />
     <Content Include="Home.aspx" />
     <Content Include="IniciarSesion.aspx" />
     <Content Include="Registrarme.aspx" />
@@ -167,6 +170,9 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Clases\clsResenas.cs" />
+    <Compile Include="Clases\clsUsuario.cs" />
+    <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

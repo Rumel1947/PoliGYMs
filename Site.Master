@@ -14,20 +14,27 @@
 
   <webopt:BundleReference runat="server" Path="~/Content/css" />
   <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <!-- Se referencia la Librería bootstrap instalada localmente -->
   <link href="<%= Page.ResolveUrl("~/Content/bootstrap.css") %>" rel="stylesheet" />
-  <link href="Styles/HojaEstilo.css" rel="stylesheet" />
+  <!-- Se referencia la hoja de estilo de nombre styleSheet ubicado en la carpeta Styles -->
+  <link href="Styles/styleSheet.css" rel="stylesheet" />
 </head>
 <body>
   <form runat="server">
+    <!-- Header con 2 Div y 1 Nav -->
     <header class="header">
+      <!-- Se crea un Div con el Logo ubicado en la carpeta Images y se aplica la clase logo del archivo Css -->
       <div class="logo">
         <img src="images/logo.jpeg" alt="Logo">
       </div>
+      <!-- Se crea un Div con el nombre de la empresa y se aplica la clase name del archivo Css -->
       <div class="name">
         <h1>PoliGYM</h1>
       </div>
+      <!-- Se crea un Nav con una lista que contiene 5 elementos y se aplica la clase menu del archivo Css -->
       <nav class="menu">
         <ul>
+          <!-- Se crea los elementos de la lista y se aplica la clase nav-link del archivo Css -->
           <li><a class="nav-link" href="<%= Page.ResolveUrl("~/Home.aspx") %>">Home</a></li>
           <li><a class="nav-link" href="<%= Page.ResolveUrl("~/Servicios.aspx") %>">Servicios</a></li>
           <li><a class="nav-link" href="<%= Page.ResolveUrl("~/Resenas.aspx") %>">Reseñas </a></li>
@@ -37,15 +44,18 @@
       </nav>
     </header>
     <div class="container body-content">
+      <!-- Espacion donde se ingresará el codigo de las páginas dependientes de Site.Master -->
       <asp:ContentPlaceHolder ID="MainContent" runat="server">
       </asp:ContentPlaceHolder>
       <hr />
+      <!-- Se crea el Footer con dos Div, uno en el que se tienen los link a Instagram, Facebook y Gmail, se aplica la clase footer del archivo Css -->
       <footer class="footer">
         <div class="left-section">
-          <img src="images/logoInstagram.png" alt="Instagram Logo">
-          <img src="images/logoFacebook.png" alt="Facebook Logo">
-          <img src="images/logoGmail.png" alt="Gmail Logo">
+          <asp:ImageButton ID="imgInstagram" runat="server" ImageUrl="~/images/logoInstagram.png" PostBackUrl="https://www.instagram.com/" />  
+          <asp:ImageButton ID="imgFacebook" runat="server" ImageUrl="~/images/logoFacebook.png" PostBackUrl="https://www.facebook.com/?locale=es_LA" /> 
+          <asp:ImageButton ID="imgGmail" runat="server" ImageUrl="~/images/logoGmail.png" PostBackUrl="https://www.google.com/intl/es-419/gmail/about/" /> 
         </div>
+        <!-- Segundo Div del footer con el eslogan de la compañia, se aplica la clase footer del archivo Css  -->
         <div class="right-section">
           <p>¡Nunca te rindas! Tu mejor versión está a solo un paso de distancia. ¿Listo para empezar?</p>
         </div>
