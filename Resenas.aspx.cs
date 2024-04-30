@@ -11,11 +11,18 @@ namespace PoliGYM
     {
       if (!IsPostBack)
       {
+        ValidarSession();
         CargarResenas();
       }
         
     }
-   
+   void ValidarSession()
+    {
+      if (!string.IsNullOrEmpty(Session["usuario"].ToString()))
+        {
+        pResena.Visible=true;
+      }
+    }
   
   void CargarResenas()
   {
@@ -40,6 +47,11 @@ namespace PoliGYM
       return;
     }
 
-  } 
+  }
+
+    protected void btnEnviar_Click(object sender, EventArgs e)
+    {
+
+    }
   } 
 }

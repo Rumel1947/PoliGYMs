@@ -34,15 +34,15 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-       <!--se crea un Div que se define de 6 columna para pantallas iguales o superiores a 720px y se centra el texto-->
+      <!--se crea un Div que se define de 6 columna para pantallas iguales o superiores a 720px y se centra el texto-->
       <div class="col-md-6 text-center">
-         <!-- se define el titulo mediante la etiqueta h1 y se aplica la clase h1 del archivo Css, además se define margen superior 4 y margen inferior 5 -->
+        <!-- se define el titulo mediante la etiqueta h1 y se aplica la clase h1 del archivo Css, además se define margen superior 4 y margen inferior 5 -->
         <h1 class="h1 mb-5 mt-4">Inicia Sesión</h1>
-         <!--se crea un Div con la clase row de boostrap para indicar que es una nueva fila, además se define  margen inferior 3 -->
+        <!--se crea un Div con la clase row de boostrap para indicar que es una nueva fila, además se define  margen inferior 3 -->
         <div class="row mb-3 text-center">
           <!--se crea un Div que se define de 6 columna para pantallas iguales o superiores a 720px y se centra el texto mediante mx-auto -->
           <div class="col-md-6 mx-auto">
-             <!--se crea TextBox para el email con un ancho de 250 y se aplica la clase de bootstrap para redondear las esquinas -->
+            <!--se crea TextBox para el email con un ancho de 250 y se aplica la clase de bootstrap para redondear las esquinas -->
             <asp:TextBox ID="txtEmail" runat="server" placeholder="Correo Electrónico" Width="250" class="form-control rounded"></asp:TextBox>
           </div>
         </div>
@@ -50,17 +50,21 @@
         <div class="row text-center">
           <!--se crea un Div que se define de 6 columna para pantallas iguales o superiores a 720px y se centra el texto mediante mx-auto -->
           <div class="col-md-6 mx-auto">
-             <!--se crea TextBox para la contrasena con un ancho de 250 y se aplica la clase de bootstrap para redondear las esquinas -->
+            <!--se crea TextBox para la contrasena con un ancho de 250 y se aplica la clase de bootstrap para redondear las esquinas -->
             <asp:TextBox ID="txtContrasena" runat="server" placeholder="Contraseña" Width="250" class="form-control rounded"></asp:TextBox>
           </div>
         </div>
         <!--se crea un Div con la clase row de boostrap para indicar que es una nueva fila, además se define  margen superior en 5 -->
         <div class="row mt-5">
-           <!--se crea un Div que se define de 12 columna para pantallas iguales o superiores a 720px y se centra el texto mediante text-center -->
           <div class="col-md-12 text-center">
-            <!--se crea un boton de nombre Empezar y se aplica la clase  link-button del archivo Css -->
-            <asp:Button ID="btnEmpezar" runat="server" Text="Empezar" class="link-button"></asp:Button>
+            <asp:Label ID="lblMensaje" runat="server" Text="" CssClass="mb-3"></asp:Label>
           </div>
+          <!--se crea un Div que se define de 12 columna para pantallas iguales o superiores a 720px y se centra el texto mediante text-center -->
+          <div class="col-md-12  mt-5 text-center">
+            <!--se crea un boton de nombre Empezar y se aplica la clase  link-button del archivo Css -->
+            <asp:Button ID="btnEmpezar" runat="server" Text="Empezar" class="link-button" OnClick="btnEmpezar_Click"></asp:Button>
+          </div>
+
         </div>
       </div>
     </div>

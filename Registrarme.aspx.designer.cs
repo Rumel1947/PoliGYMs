@@ -15,6 +15,15 @@ namespace PoliGYM
   {
 
     /// <summary>
+    /// vsResumen control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.ValidationSummary vsResumen;
+
+    /// <summary>
     /// txtNombre control.
     /// </summary>
     /// <remarks>
@@ -22,6 +31,24 @@ namespace PoliGYM
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox txtNombre;
+
+    /// <summary>
+    /// rfvNombre control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombre;
+
+    /// <summary>
+    /// revNombre control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RegularExpressionValidator revNombre;
 
     /// <summary>
     /// txtFecNacimiento control.
@@ -33,6 +60,15 @@ namespace PoliGYM
     protected global::System.Web.UI.WebControls.TextBox txtFecNacimiento;
 
     /// <summary>
+    /// rfvFechaNac control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFechaNac;
+
+    /// <summary>
     /// txtTelefono control.
     /// </summary>
     /// <remarks>
@@ -40,6 +76,15 @@ namespace PoliGYM
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox txtTelefono;
+
+    /// <summary>
+    /// rfvTelefono control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTelefono;
 
     /// <summary>
     /// txtEmail control.
@@ -51,6 +96,15 @@ namespace PoliGYM
     protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
     /// <summary>
+    /// rfvEmail control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
+
+    /// <summary>
     /// txtContrasena control.
     /// </summary>
     /// <remarks>
@@ -60,6 +114,15 @@ namespace PoliGYM
     protected global::System.Web.UI.WebControls.TextBox txtContrasena;
 
     /// <summary>
+    /// rfvContrasena control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvContrasena;
+
+    /// <summary>
     /// txtValContrasena control.
     /// </summary>
     /// <remarks>
@@ -67,6 +130,24 @@ namespace PoliGYM
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox txtValContrasena;
+
+    /// <summary>
+    /// rfvValContrasena control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvValContrasena;
+
+    /// <summary>
+    /// cvConfirmarClave control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CompareValidator cvConfirmarClave;
 
     /// <summary>
     /// ddlGenero control.

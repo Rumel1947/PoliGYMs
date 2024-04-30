@@ -45,6 +45,41 @@ namespace PoliGYM.Clases
       return result;
     }
 
+    public bool ValUsuario(string email, string contrasena)
+    {
+      bool respuesta = false;
+      string query = "Select idUsuario From Usuarios Where email=@email And contrasena=@Contrasena";
+      using (SqlConnection oConexion = new SqlConnection(sConPoliGym))
+      {
+        using (SqlCommand oComando = new SqlCommand(query, oConexion))
+        {
+          oComando.Parameters.AddWithValue("@email", email);
+          oComando.Parameters.AddWithValue("@Contrasena", contrasena);
+          try
+          {
+            oConexion.Open();
+            object result = oComando.ExecuteScalar();
+            if (result != null && result != DBNull.Value)
+            {
+              int iRegs = Convert.ToInt32(result);
+              if (iRegs > 0)
+              {
+                respuesta = true;
+              }
+            }
+          }
+          catch (SqlException e)
+          {
+            respuesta = false;
+          }
+          finally
+          {
+            oConexion.Close();
+          }
+          return respuesta;
+        }
+      }
+    }
 
   }
 }

@@ -17,25 +17,28 @@ namespace PoliGYM
 
     protected void btnRegistrar_Click(object sender, EventArgs e)
     {
-      Usuario usuario = new Usuario()
+      if (Page.IsValid)
       {
-        Nombre = txtNombre.Text,
-        FechaNacimiento = Convert.ToDateTime(txtFecNacimiento.Text),
-        Contrasena = txtContrasena.Text,
-        Email = txtEmail.Text,
-        Genero = Convert.ToInt16(ddlGenero.SelectedValue),
-        IdRol = 2,
-        Telefono = txtTelefono.Text
-      };
-      clsUsuario oUsuario = new clsUsuario();
-      lblMensaje.Text = oUsuario.AdiUsuario(usuario);
-      if (lblMensaje.Text == "OK")
-      {
-        lblMensaje.CssClass = "text-success";
-      }
-      else
-      {
-        lblMensaje.CssClass = "text-danger";
+        Usuario usuario = new Usuario()
+        {
+          Nombre = txtNombre.Text,
+          FechaNacimiento = Convert.ToDateTime(txtFecNacimiento.Text),
+          Contrasena = txtContrasena.Text,
+          Email = txtEmail.Text,
+          Genero = Convert.ToInt16(ddlGenero.SelectedValue),
+          IdRol = 2,
+          Telefono = txtTelefono.Text
+        };
+        clsUsuario oUsuario = new clsUsuario();
+        lblMensaje.Text = oUsuario.AdiUsuario(usuario);
+        if (lblMensaje.Text == "OK")
+        {
+          lblMensaje.CssClass = "text-success";
+        }
+        else
+        {
+          lblMensaje.CssClass = "text-danger";
+        }
       }
     }
   }

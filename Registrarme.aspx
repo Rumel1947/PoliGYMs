@@ -3,6 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
   <!--se crea un Div con la clase container de boostrap -->
   <div class="container">
+    <asp:ValidationSummary runat="server" ID="vsResumen" DisplayMode="BulletList" ShowMessageBox="false" ShowSummary="true" CssClass="alert alert-danger" />
+
     <!--se crea un Div con la clase row de boostrap para indicar que es una nueva fila-->
     <div class="row">
       <!--se crea un Div que se define de 6 columna para pantallas iguales o superiores a 720px-->
@@ -34,6 +36,7 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+
       <!--se crea un Div que se define de 6 columna para pantallas iguales o superiores a 720px-->
       <div class="col-md-6 text-center">
         <!-- se define el titulo mediante la etiqueta h1 y se aplica la clase h1 del archivo Css, además se define margen inferior en 5 y supeior en 4 -->
@@ -44,18 +47,30 @@
           <div class="col-md-6">
             <!--se crea TextBox para el nombre con un ancho de 250 y se aplica la clase de bootstrap para redondear las esquinas -->
             <asp:TextBox ID="txtNombre" runat="server" placeholder="Ingresa tu nombre" MaxLength="50" Width="250" class="form-control rounded mb-3"></asp:TextBox>
-            <!--se crea TextBox para la fecha de nacimiento con un ancho de 250 y se aplica la clase de bootstrap para redondear las esquinas -->
+            <asp:RequiredFieldValidator runat="server" ID="rfvNombre" ErrorMessage="Ingrese el nombre" ControlToValidate="txtNombre" Display="Dynamic" SetFocusOnError="true" CssClass="alert-danger" />
+            <asp:RegularExpressionValidator runat="server" ID="revNombre" ErrorMessage="Sólo letras y espacio en blanco" ControlToValidate="txtNombre" ValidationExpression="^[ A-Za-zÑñáéíóú]+$" Display="Dynamic" SetFocusOnError="true" CssClass="alert-danger" />
+           <!--se crea TextBox para la fecha de nacimiento con un ancho de 250 y se aplica la clase de bootstrap para redondear las esquinas -->
             <asp:TextBox ID="txtFecNacimiento" runat="server" placeholder="Ingresa tu fecha de nacimiento" MaxLength="10" Width="250" TextMode="Date" class="form-control rounded mb-3"></asp:TextBox>
+            <asp:RequiredFieldValidator runat="server" ID="rfvFechaNac" ErrorMessage="Seleccione la fecha de nacimiento" ControlToValidate="txtFecNacimiento" Display="Dynamic" SetFocusOnError="true" CssClass="alert-danger" />
             <!--se crea TextBox para el teléfono con un ancho de 250 y se aplica la clase de bootstrap para redondear las esquinas -->
-            <asp:TextBox ID="txtTelefono" runat="server" placeholder="Número de teléfono" MaxLength="10" Width="250" TextMode="Phone" class="form-control rounded mb-3"></asp:TextBox>
+            <asp:TextBox ID="txtTelefono" runat="server" placeholder="Número de teléfono" MaxLength="10" Width="250" TextMode="Number" class="form-control rounded mb-3"></asp:TextBox>
+            <asp:RequiredFieldValidator runat="server" ID="rfvTelefono" ErrorMessage="Ingrese el télefono" ControlToValidate="txtTelefono" Display="Dynamic" SetFocusOnError="true" CssClass="alert-danger" />
+
           </div>
           <div class="col-md-6">
             <!--se crea TextBox para el email con un ancho de 250 y se aplica la clase de bootstrap para redondear las esquinas -->
             <asp:TextBox ID="txtEmail" runat="server" placeholder="Correo Eléctronico" Width="250" MaxLength="50" TextMode="Email" class="form-control rounded mb-3"></asp:TextBox>
+            <asp:RequiredFieldValidator runat="server" ID="rfvEmail" ErrorMessage="Ingrese email" ControlToValidate="txtEmail" Display="Dynamic" SetFocusOnError="true" CssClass="alert-danger" />
+
             <!--se crea TextBox para la contrasena con un ancho de 250 y se aplica la clase de bootstrap para redondear las esquinas -->
             <asp:TextBox ID="txtContrasena" runat="server" placeholder="Contraseña" MaxLength="16" Width="250" TextMode="Password" class="form-control rounded mb-3"></asp:TextBox>
+            <asp:RequiredFieldValidator runat="server" ID="rfvContrasena" ErrorMessage="Ingrese Contraseña" ControlToValidate="txtContrasena" Display="Dynamic" SetFocusOnError="true" CssClass="alert-danger" />
+
             <!--se crea TextBox para validar la contrasena con un ancho de 250 y se aplica la clase de bootstrap para redondear las esquinas -->
             <asp:TextBox ID="txtValContrasena" runat="server" placeholder="Validar la contraseña" MaxLength="16" Width="250" TextMode="Password" class="form-control rounded mb-3"></asp:TextBox>
+            <asp:RequiredFieldValidator runat="server" ID="rfvValContrasena" ErrorMessage="Ingrese Validar contraseña" ControlToValidate="txtValContrasena" Display="Dynamic" SetFocusOnError="true" CssClass="alert-danger" />
+            <asp:CompareValidator runat="server" ID="cvConfirmarClave" ErrorMessage="La clave no coincide"
+              ControlToValidate="txtValContrasena" ControlToCompare="txtContrasena" Display="Dynamic" SetFocusOnError="true" CssClass="alert-danger" />
           </div>
         </div>
         <!--se crea un Div con la clase row de boostrap para indicar que es una nueva fila-->

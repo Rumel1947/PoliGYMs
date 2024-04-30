@@ -104,8 +104,9 @@ select { /* Propiedades de los elementos Select (DropDownList) */
     margin: auto;
 }
 .scroll-container {
-    overflow-y: auto;
-    max-height: 300px; 
+    overflow-y: scroll; /* Scroll vertical siempre visible */
+    overflow-x: hidden; /* Oculta el scroll horizontal */
+    max-height: 300px;
 }
 .nombreUsuario {
     color: #C3F762;
